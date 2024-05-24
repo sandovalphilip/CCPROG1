@@ -1,0 +1,30 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main() {
+	int nStudentNum;
+	float fMP;
+	float fCourseAct;
+	float fHO1, fHO2;
+	float fMidTerms; 
+	float fFinals;
+	float fOutputGrade;
+	
+	printf("Enter your Machine Project Grade: ");
+	scanf("%f", &fMP);
+	printf("Enter your Course Activities Grade: ");
+	scanf("%f", &fCourseAct);
+	printf("Enter your Hands on Exam Grades:\n");
+	scanf("%f%f", &fHO1, &fHO2);
+	printf("Enter your Midterm Exam Grade: ");
+	scanf("%f", &fMidTerms);
+	printf("Enter your Final Exam Grade: ");
+	scanf("%f", &fFinals);	 
+	
+	fOutputGrade = fMP * 0.2 + fCourseAct * 0.2 + (fHO1 + fHO2)/2.0 * 0.2 + fMidTerms * 0.2 + fFinals * 0.2;
+	
+	printf("The output grade of your CCPROG1 is %.2f\n", fOutputGrade);
+	
+	return 0;
+}
+
