@@ -1,0 +1,40 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+float HandsOn () {
+	float fHandsOn, fHandsOn1, fHandsOn2, fAveHandsOn;
+	
+	printf("\nEnter your Hands On # 1 Grade: ");
+	scanf("%f", &fHandsOn1);
+	
+	printf("\nEnter your Hands On # 2 Grade: ");
+	scanf("%f", &fHandsOn2);
+	
+	fAveHandsOn = fHandsOn1 + fHandsOn2 / 2;
+	fHandsOn = ComputeRaw(fAveHandsOn);
+	
+	return fHandsOn;
+}
+
+float ComputeRaw (float fInput) {
+	float fComp;
+	fComp = fInput * 0.2;
+	
+	return fComp;
+}
+
+int main () {
+	
+	int nStudentNum;
+	float fHandsOn, fFinalGrade;
+	
+	printf("\nEnter your Student Number: ");
+	scanf("%n", &nStudentNum);
+	
+	fHandsOn = HandsOn();
+	fFinalGrade = fHandsOn;
+	
+	printf("\nYour Grade is: %f", fFinalGrade);
+	
+	return 0;
+}	
