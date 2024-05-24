@@ -1,7 +1,15 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-float HandsOn () {
+float ComputeRaw (float fInput) {
+	float fComp;
+	fComp = fInput * 0.2;
+	
+	return fComp;
+}
+
+float HandsOn () 
+{
 	float fHandsOn, fHandsOn1, fHandsOn2, fAveHandsOn;
 	
 	printf("\nEnter your Hands On # 1 Grade: ");
@@ -10,17 +18,10 @@ float HandsOn () {
 	printf("\nEnter your Hands On # 2 Grade: ");
 	scanf("%f", &fHandsOn2);
 	
-	fAveHandsOn = fHandsOn1 + fHandsOn2 / 2;
+	fAveHandsOn = fHandsOn1 + fHandsOn2 / 2.0;
 	fHandsOn = ComputeRaw(fAveHandsOn);
 	
 	return fHandsOn;
-}
-
-float ComputeRaw (float fInput) {
-	float fComp;
-	fComp = fInput * 0.2;
-	
-	return fComp;
 }
 
 int main () {
@@ -37,4 +38,4 @@ int main () {
 	printf("\nYour Grade is: %f", fFinalGrade);
 	
 	return 0;
-}	
+}
