@@ -1,0 +1,34 @@
+#include <stdio.h>
+
+float displayBudget(float amount, float budget){
+
+	if(amount > budget){
+		printf("OVERBUDGET");	
+	}
+	
+	if(amount == budget){
+		printf("ENOUGH BUDGET");	
+	}
+	
+	if(amount < budget){
+		printf("IN BUDGET");	
+	}
+	
+	return 0;
+}
+
+int main()
+{
+	float fAmount;
+	float fBudget;
+	
+	printf("Input an amount: ");
+	scanf("%f", &fAmount);
+	
+	printf("Input the budget: ");
+	scanf("%f", &fBudget);
+	
+	displayBudget(fAmount, fBudget);
+	
+	return 0;
+}
