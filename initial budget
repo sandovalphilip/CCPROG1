@@ -1,0 +1,43 @@
+#include <stdio.h>
+
+// 1. ask input initial budget & initial amount.
+// 2. if amount is less than budget, ask the user if want to add amount.
+// 3. if agree, ask amount.
+// 4. if disagree, end the program.
+// 5. if added an amount, add the initial amount.
+// 6. compare amount and budget.
+// 7. repeat #2.
+// 8. if amount is greater or equal the budget, display "OVER BUDGET" and end the program.
+
+float displayBudget(float amount, float budget){
+
+	if(amount > budget){
+		printf("OVER BUDGET");	
+	}
+	
+	if(amount == budget){
+		printf("ENOUGH BUDGET");	
+	}
+	
+	if(amount < budget){
+		printf("IN BUDGET");	
+	}
+	
+	return 0;
+}
+
+int main()
+{
+	float fAmount;
+	float fBudget;
+	
+	printf("Input an amount: ");
+	scanf("%f", &fAmount);
+	
+	printf("Input the budget: ");
+	scanf("%f", &fBudget);
+	
+	displayBudget(fAmount, fBudget);
+	
+	return 0;
+}
