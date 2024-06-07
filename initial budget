@@ -10,19 +10,17 @@
 // 8. if amount is greater or equal the budget, display "OVER BUDGET" and end the program.
 
 float displayBudget(float amount, float budget){
+char cAgreeOrDisagree;
 
-	if(amount > budget){
-		printf("OVER BUDGET");	
-	}
-	
-	if(amount == budget){
-		printf("ENOUGH BUDGET");	
-	}
-	
 	if(amount < budget){
-		printf("IN BUDGET");	
+		printf("Do you want to add more amount? (Type A for Agree and D for Disagree): ");	
+		scanf("%c", &cAgreeOrDisagree);		
 	}
 	
+	if(amount >= budget){
+		printf("OVER BUDGET");
+    }
+    
 	return 0;
 }
 
@@ -31,10 +29,10 @@ int main()
 	float fAmount;
 	float fBudget;
 	
-	printf("Input an amount: ");
+	printf("Input an initial amount: ");
 	scanf("%f", &fAmount);
 	
-	printf("Input the budget: ");
+	printf("Input an initial budget: ");
 	scanf("%f", &fBudget);
 	
 	displayBudget(fAmount, fBudget);
