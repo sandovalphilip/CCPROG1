@@ -1,41 +1,37 @@
 #include <stdio.h>
 
-// 1. ask input initial budget & initial amount.
-// 2. if amount is less than budget, ask the user if want to add amount.
-// 3. if agree, ask amount.
-// 4. if disagree, end the program.
-// 5. if added an amount, add the initial amount.
-// 6. compare amount and budget.
-// 7. repeat #2.
-// 8. if amount is greater or equal the budget, display "OVER BUDGET" and end the program.
-
-float displayBudget(float amount, float budget){
-char cAgreeOrDisagree;
-
-	if(amount < budget){
-		printf("Do you want to add more amount? (Type A for Agree and D for Disagree): ");	
-		scanf("%c", &cAgreeOrDisagree);		
-	}
-	
-	if(amount >= budget){
-		printf("OVER BUDGET");
+// Function to display budget status
+void displayBudget(float amount, float budget) {
+    char cAgreeOrDisagree;
+    while (amount < budget) {
+        printf("Do you want to add more amount? (Type A for Agree and D for Disagree): ");
+        scanf(" %c", &cAgreeOrDisagree); // Note the space before %c to consume any previous newline
+        if (cAgreeOrDisagree == 'A' || cAgreeOrDisagree == 'a') {
+            float additionalAmount;
+            printf("Enter the amount to add: ");
+            scanf("%f", &additionalAmount);
+            amount += additionalAmount;
+            printf("Updated amount: %.2f\n", amount);
+        } else if (cAgreeOrDisagree == 'D' || cAgreeOrDisagree == 'd') {
+            printf("Exiting the program.\n");
+            return;
+        } else {
+            printf("Invalid input. Please type A for Agree or D for Disagree.\n");
+        }
     }
-    
-	return 0;
+    printf("OVER BUDGET\n");
 }
 
-int main()
-{
-	float fAmount;
-	float fBudget;
-	
-	printf("Input an initial amount: ");
-	scanf("%f", &fAmount);
-	
-	printf("Input an initial budget: ");
-	scanf("%f", &fBudget);
-	
-	displayBudget(fAmount, fBudget);
-	
-	return 0;
+int main() {
+    float initialAmount;
+    float initialBudget;
+
+    printf("Input the initial amount: ");
+    scanf("%f", &initialAmount);
+    printf("Input the initial budget: ");
+    scanf("%f", &initialBudget);
+
+    displayBudget(initialAmount, initialBudget);
+
+    return 0;
 }
