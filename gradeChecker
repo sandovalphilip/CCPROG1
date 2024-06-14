@@ -1,92 +1,88 @@
 #include <stdio.h>
 
-float checkRange(float fGrade, float fUpperRange, float fLowerRange){
-	if(fGrade <= fUpperRange) && (fGrade > fLowerRange){
-	  printf("Correct Grade");
-    } else { 
-      printf("Incorrect Grade");	
-	}
+void checkRange(float fGrade, float fUpperRange, float fLowerRange) {
+    if ((fGrade <= fUpperRange) && (fGrade > fLowerRange)) {
+        printf("Correct Grade\n");
+    } else {
+        printf("Incorrect Grade\n");
+    }
 }
 
-int main(){
-	
-  char Letter;	
-  int Grade;
+int main() {
 
-  printf("Input Letter: ");
-  scanf("%c",&Letter);
-  printf("Input Grade: ");
-  scanf("%d",&Grade);
-  
-  return 0;
-}
+    char Letter;
+    float fGrade, fUpperRange, fLowerRange;
 
- switch(cLetter){
-  	
+    printf("Input Letter: ");
+    scanf("%c", &Letter);
+    printf("Input Grade: ");
+    scanf("%f", &fGrade);
+
+    switch (Letter) {
+
     case 'A':
-    	fUpperRange = 100.00;
-    	fLowerRange = 97.00;
-    	checkRange(fGrade, fUpperRange, fLowerRange);
-    	break;
-    
-	case 'B':
-    	fUpperRange = 96.99;
-    	fLowerRange = 94.00;
-    	checkRange(fGrade, fUpperRange, fLowerRange);
-    	break;
-			
-    case 'C':
-    	fUpperRange = 93.99;
-    	fLowerRange = 91.00;
-    	checkRange(fGrade, fUpperRange, fLowerRange);
-    	break;
-    	
-    case 'D':
-    	fUpperRange = 90.99;
-    	fLowerRange = 88.00;
-    	checkRange(fGrade, fUpperRange, fLowerRange);
-    	break;
-	
-	case 'E':
-    	fUpperRange = 87.99;
-    	fLowerRange = 85.00;
-    	checkRange(fGrade, fUpperRange, fLowerRange);
-    	break;
-		
-	case 'F':
-    	fUpperRange = 84.99;
-    	fLowerRange = 82.00;
-    	checkRange(fGrade, fUpperRange, fLowerRange);
-    	break;
-	
-	case 'G':
-    	fUpperRange = 81.99;
-    	fLowerRange = 80.00;
-    	checkRange(fGrade, fUpperRange, fLowerRange);
-    	break;
-		
-	case 'H':
-    	fUpperRange = 79.99;
-    	fLowerRange = 78.00;
-    	checkRange(fGrade, fUpperRange, fLowerRange);
-    	break;
-		
-	case 'I':
-    	fUpperRange = 77.99;
-    	fLowerRange = 70.00;
-    	checkRange(fGrade, fUpperRange, fLowerRange);
-    	break;
-		
-	case 'J':
-    	fUpperRange = 69.99;
-    	fLowerRange = 0.00;
-    	checkRange(fGrade, fUpperRange, fLowerRange);
-    	break;	
-	
-	default:
-	    printf("Not Valid");									
- }
-  return 0;
-}
- 
+        fUpperRange = 100.00;
+        fLowerRange = 97.00;
+        checkRange(fGrade, fUpperRange, fLowerRange);
+        break;
 
+    case 'B':
+        fUpperRange = 96.99;
+        fLowerRange = 94.00;
+        checkRange(fGrade, fUpperRange, fLowerRange);
+        break;
+
+    case 'C':
+        fUpperRange = 93.99;
+        fLowerRange = 91.00;
+        checkRange(fGrade, fUpperRange, fLowerRange);
+        break;
+
+    case 'D':
+        fUpperRange = 90.99;
+        fLowerRange = 88.00;
+        checkRange(fGrade, fUpperRange, fLowerRange);
+        break;
+
+    case 'E':
+        fUpperRange = 87.99;
+        fLowerRange = 85.00;
+        checkRange(fGrade, fUpperRange, fLowerRange);
+        break;
+
+    case 'F':
+        fUpperRange = 84.99;
+        fLowerRange = 82.00;
+        checkRange(fGrade, fUpperRange, fLowerRange);
+        break;
+
+    case 'G':
+        fUpperRange = 81.99;
+        fLowerRange = 80.00;
+        checkRange(fGrade, fUpperRange, fLowerRange);
+        break;
+
+    case 'H':
+        fUpperRange = 79.99;
+        fLowerRange = 78.00;
+        checkRange(fGrade, fUpperRange, fLowerRange);
+        break;
+
+    case 'I':
+        fUpperRange = 77.99;
+        fLowerRange = 70.00;
+        checkRange(fGrade, fUpperRange, fLowerRange);
+        break;
+
+    case 'J':
+        fUpperRange = 69.99;
+        fLowerRange = 0.00;
+        checkRange(fGrade, fUpperRange, fLowerRange);
+        break;
+
+    default:
+        printf("Not Valid\n");
+    }
+
+    return 0;
+}
