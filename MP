@@ -1,0 +1,25 @@
+/******************************************************************************
+This is to certify that this project is my own work, based on my personal
+efforts in studying and applying the concepts learned. I have constructed
+the functions and their respective algorithms and corresponding code by
+myself. The program was run, tested, and debugged by my own efforts. I
+further certify that I have not copied in part or whole or otherwise
+plagiarized the work of other students and/or persons.
+<Sandoval, Philip Angelo D.> - <12349607> - <S16>
+******************************************************************************/
+#include <stdio.h>
+#include <math.h>
+
+/*******************************************************
+Function : int RollDie(int num)
+Description : Generates a number from 1 to 6.
+Precondition(s) : num is a non-negative number
+Parameters : num – indicates the maximum number to be generated
+Return Value : Values can range from 1 to 6
+*******************************************************/
+
+
+
+int main() {
+	
+}
